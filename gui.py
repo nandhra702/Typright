@@ -5,9 +5,12 @@ from tkinter import *
 import socket
 
 def get_suggestions(mode, word):
+    #here you are connecting to your cpp backend.
     s = socket.socket()
     s.connect(('localhost', 4000))
     s.sendall(f"{mode} {word}\n".encode())
+
+    #you send the mode (autocomplete or spellchecker) and the word you want to check for
     data = b''
     while True:
         part = s.recv(1024)
@@ -15,8 +18,10 @@ def get_suggestions(mode, word):
             break
         data += part
     s.close()
+    #now, s.recv(1024) tries to read up to 1024 bytes from the server.
+    #If the server sends a response (e.g.,"mango\nmangrove\nmangoman\n"), they come in as raw bytes.
     return data.decode().splitlines()
-
+  
 
 def get_current_word(): #THIS HERE, READS THE TEXT BOX, STRIPS THE SPACES at begining and end, SPLITS THEM UP AND RETURNS THE LAST WORD
     text = textbox.get("1.0", END).strip()
@@ -47,7 +52,7 @@ def update_autocomplete_suggestions(word):
 
 
 def on_key_release(event):
-    
+    #decides which function to utilize based on size of words in text box
     char_count = len(textbox.get("1.0", "end-1c")) 
     if char_count<30:
         word = get_current_word()
