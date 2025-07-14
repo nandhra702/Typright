@@ -9,8 +9,7 @@
 - 🧠 **Smart Autocomplete** using Trie data structures  
 - 🛠️ **Real-time Spell Checking** using Levenshtein distance  
 - 💾 **Save/Load Files** in `.txt`, `.md`, `.log`, and custom extensions  
-- 🔒 **Works Offline** – No internet dependency  
-- 🧵 **Multithreaded** local server for quick suggestions  
+- 🔒 **Works Offline** – No internet dependency    
 - 🎯 Minimal, fast, distraction-free UI
 
 ---
@@ -50,10 +49,9 @@ flowchart LR
 ```
 typright/
 ├── wordlist.txt              # Dictionary for spellcheck & autocomplete
-├── client.py                 # Frontend logic (Tkinter + Socket)
+├── gui.py                 # Frontend logic (Tkinter + Socket)
 ├── server.cpp                # C++ server (Trie + Levenshtein)
-├── tries.cpp/.h             # Trie implementation
-├── levenshtein.cpp/.h       # Spellcheck algorithm
+├── tries_trial.cpp/.h             # Trie implementation
 ├── README.md
 ```
 
@@ -121,14 +119,3 @@ Suggestions: try, trip, type, trap, tryout
 - [ ] Add right-click context menu  
 
 ---
-
-## 🤝 Contributing
-
-Pull requests are welcome!  
-Improve UI, suggest new features, or optimize backend algorithms.
-
----
-
-## 📄 License
-
-MIT License © [Your Name]
