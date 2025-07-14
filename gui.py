@@ -1,5 +1,9 @@
 import subprocess
 from tkinter import *
+from tkinter import ttk
+import tkinter.font as tkFont
+from tkinter import filedialog
+import os
 
 
 import socket
@@ -82,33 +86,83 @@ def underline_last_word(word):
 
 # UI setup
 root = Tk()
-root.title("Centered trial 1")
-root.geometry("400x300")
+root.title("Typright - Notepad")
+root.geometry("700x500")
+root.configure(bg="#f8f8f8")  # Soft background
+
+# Load custom Bladerunner font from TTF file
+font_path = os.path.join(os.path.dirname(__file__), "BLADRMF_.TTF")
+
+try:
+    bladerunner_font = tkFont.Font(file=font_path, size=14)
+except Exception as e:
+    print(f"[!] Failed to load Bladerunner font: {e}")
+    bladerunner_font = ("Helvetica", 14)
+
+
 
 # Heading
 heading = Label(
     root,
-    text="My First try at a notepad with autocomplete suggestions",
-    font=("Helvetica", 19),
-    fg="black",
-    bg="white"
+    text="Typright",
+    font=(bladerunner_font, 26, "bold"),
+    fg="#333333",  # Soft black
+    bg="#f8f8f8"
 )
 heading.pack(padx=20, pady=(30, 10))
 
-# Textbox
+#Top Menu
+my_menu = Menu(root)
+root.config(menu = my_menu)
+
+file_menu = Menu(my_menu)
+my_menu.add_cascade(label = "File", menu = file_menu)
+file_menu.add_command(label="New")
+file_menu.add_separator()
+file_menu.add_command(label="Open")
+file_menu.add_separator()
+file_menu.add_command(label="Save")
+file_menu.add_separator()
+file_menu.add_command(label="Exit")
+
+# Fancy Textbox
 textbox = Text(
     root,
-    width=80,
-    height=10,
-    fg="black",
-    bg="lightblue"
+    width=70,
+    height=15,
+    font=(bladerunner_font, 14),
+    fg="#202020",
+    bg="#ffffff",
+    insertbackground="#2f8fff",  # Soft blue cursor
+    relief=FLAT,
+    undo = True,
+    bd=2,
+    highlightthickness=2,
+    highlightbackground="#e0e0e0",
+    highlightcolor="#2f8fff"
 )
-textbox.pack(padx=30, pady=(10, 5))
+textbox.pack(padx=30, pady=(10, 10))
+
+
+# Autocomplete Listbox
+listbox = Listbox(
+    root,
+    height=4,
+    bg="#fafafa",
+    fg="#2f8fff",
+    font=(bladerunner_font, 12),
+    highlightthickness=1,
+    selectbackground="#3997e3",
+    selectforeground="#000000",
+    borderwidth=0
+)
+listbox.pack(padx=30, pady=(0, 10))
+
+
+
 textbox.bind("<KeyRelease>", on_key_release)
 textbox.bind("<space>", on_space)
 
-# Listbox for autocomplete suggestions
-listbox = Listbox(root, height=4)
-listbox.pack(padx=30, pady=(0, 10))
+
 
 root.mainloop()
