@@ -20,19 +20,6 @@
 
 ---
 
-## 🛠️ Architecture
-
-```mermaid
-flowchart LR
-    A[User Typing in UI] --> B[Python Frontend (Tkinter)]
-    B -->|Sends request| C[Local Python Client Socket]
-    C -->|Text + Mode| D[C++ Backend Server]
-    D -->|Suggestions| C
-    C -->|Return words| B
-```
-
----
-
 ## 🧰 Tech Stack
 
 | Layer        | Technology                 |
