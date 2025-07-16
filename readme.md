@@ -4,23 +4,17 @@
 
 ---
 
-## 🚀 Features
+##  Features
 
-- 🧠 **Smart Autocomplete** using Trie data structures  
-- 🛠️ **Real-time Spell Checking** using Levenshtein distance  
-- 💾 **Save/Load Files** in `.txt`, `.md`, `.log`, and custom extensions  
-- 🔒 **Works Offline** – No internet dependency    
-- 🎯 Minimal, fast, distraction-free UI
-
----
-
-## 🖼️ Preview
-
-> _(Screenshot coming soon)_
+-  **Smart Autocomplete** using Trie data structures  
+-  **Real-time Spell Checking** using Levenshtein distance  
+-  **Save/Load Files** in `.txt`, `.md`, `.log`, and custom extensions  
+-  **Works Offline** – No internet dependency    
+-  Minimal, fast, distraction-free UI
 
 ---
 
-## 🧰 Tech Stack
+##  Tech Stack
 
 | Layer        | Technology                 |
 |-------------|----------------------------|
@@ -31,7 +25,7 @@
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 typright/
@@ -44,7 +38,7 @@ typright/
 
 ---
 
-## 🔧 How to Run
+##  How to Run
 
 ### Prerequisites
 
@@ -69,14 +63,14 @@ python3 client.py
 
 ---
 
-## 🌐 Modes of Operation
+##  Modes of Operation
 
 - `auto word` → Suggest autocomplete words  
 - `spell word` → Suggest corrected spellings  
 
 ---
 
-## 💡 Example
+##  Example
 
 ```txt
 Input: spell tryp
@@ -85,7 +79,7 @@ Suggestions: try, trip, type, trap, tryout
 
 ---
 
-## 🧠 How It Works
+##  How It Works
 
 - **Autocomplete**:  
   Uses a Trie structure to fetch prefix-matching words in `O(k)` time.
@@ -98,7 +92,7 @@ Suggestions: try, trip, type, trap, tryout
 
 ---
 
-## 📈 Future Improvements
+##  Future Improvements
 
 - [ ] Add theme switcher (Dark/Light)  
 - [ ] Support grammar suggestions  
