@@ -1,4 +1,4 @@
-# ✨ Typright — The Smartest Local Notepad
+# ✨ Typright — The Smartest Local Notepad "" EVERYTHING IS TO BE CHANGED
 
 > A blazing fast **offline** notepad with **real-time spell check** and **autocomplete** — built with Python (Tkinter frontend) and a C++ backend server. Designed for speed, precision, and privacy.
 
@@ -14,7 +14,7 @@
 
 ---
 
-##  Tech Stack
+##  Tech Stack TO BE CHANGED
 
 | Layer        | Technology                 |
 |-------------|----------------------------|
