@@ -25,9 +25,9 @@ Source: "wordlist.txt"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
 ; Start Menu shortcut
-Name: "{group}\Typright", Filename: "{app}\Typright.exe"
+Name: "{group}\Typright"; Filename: "{app}\Typright.exe"
 ; Desktop shortcut
-Name: "{commondesktop}\Typright", Filename: "{app}\Typright.exe"
+Name: "{commondesktop}\Typright"; Filename: "{app}\Typright.exe"
 
 [Registry]
 ; Associate .type files with Typright
