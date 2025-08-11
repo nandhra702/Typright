@@ -47,7 +47,7 @@ No setup required — just download and run!
 ---
 
 ## 📷 Preview  
-![Typright Demo](assets/final_typright.gif)
+![Typright Demo](assets/final_typeright.gif)
 
 ---
 
