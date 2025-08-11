@@ -47,7 +47,7 @@ No setup required — just download and run!
 ---
 
 ## 📷 Preview  
-*(You can add screenshots or GIFs here for extra appeal)*
+![Typright Demo](assets/final_typright.gif)
 
 ---
 
