@@ -1,5 +1,5 @@
 # Typright  
-** A smart, modern notepad featuring real-time spell-check and intuitive autocomplete for cleaner writing.**
+ A smart, modern notepad featuring real-time spell-check and intuitive autocomplete for cleaner writing.
 
 ---
 
